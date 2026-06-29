@@ -1,0 +1,6 @@
+body { background-color: #09090b; color: #e4e4e7; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+#particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; }
+.glass { background: rgba(20, 20, 23, 0.6); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.05); }
+.btn-active { border: 1px solid #8b5cf6 !important; color: #8b5cf6 !important; background: #1a103d !important; }
+.btn-exp, .btn-tier { background: #000; border: 1px solid #27272a; padding: 10px; border-radius: 10px; font-size: 0.8rem; font-weight: 600; transition: all 0.2s ease; }
+.btn-exp:hover, .btn-tier:hover { border-color: #5b21b6; }

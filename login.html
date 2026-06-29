@@ -1,0 +1,14 @@
+<body class="bg-[#09090b] flex items-center justify-center h-screen">
+    <div class="glass p-8 rounded-3xl w-96">
+        <h1 class="text-white font-bold mb-4">LOGIN PX</h1>
+        <input type="text" id="user" class="w-full bg-black p-3 mb-4 rounded-lg text-white">
+        <button onclick="doLogin()" class="w-full bg-violet-600 p-3 rounded-lg text-white font-bold">MASUK</button>
+    </div>
+    <script>
+        function doLogin() {
+            // Fetch ke auth.php
+            localStorage.setItem('px_u', document.getElementById('user').value);
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>

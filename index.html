@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body class="p-4 md:p-8">
+    <div id="particles-js"></div>
+    <div id="maintOverlay" class="fixed inset-0 z-[100] hidden bg-black/95 flex-col items-center justify-center p-6 text-center">
+        <i class="fa-solid fa-screwdriver-wrench text-6xl text-amber-500 animate-pulse"></i>
+        <h1 class="text-3xl font-bold mt-4">MAINTENANCE</h1>
+    </div>
+
+    <main class="max-w-5xl mx-auto space-y-6">
+        <header class="glass p-6 rounded-3xl flex justify-between items-center">
+            <div>
+                <h1 class="text-xl font-bold">PX<span class="text-violet-500">CONTROL</span></h1>
+                <p class="text-xs text-slate-500"><i class="fa-solid fa-user"></i> <span id="uName">Admin</span> • RESELLER</p>
+            </div>
+            <button onclick="logout()" class="p-2 text-rose-500"><i class="fa-solid fa-power-off"></i></button>
+        </header>
+
+        <section class="glass p-8 rounded-3xl">
+            <h2 class="text-lg font-semibold mb-6">Generator</h2>
+            <div id="prevKey" class="bg-black p-4 rounded-xl border border-violet-900/30 text-center font-mono text-xs text-violet-400 mb-6">PX-PREM-LUNATIC-RANDOM</div>
+            
+            <div class="space-y-4">
+                <input type="text" id="genCustom" oninput="updatePreview()" placeholder="Custom Lisensi" class="w-full bg-black border border-slate-800 p-3 rounded-xl outline-none">
+                <div class="grid grid-cols-3 gap-2">
+                    <button class="btn-tier btn-active" onclick="selectTier('LUNATIC', this)">LUNATIC</button>
+                    <button class="btn-tier" onclick="selectTier('AERIS', this)">AERIS</button>
+                    <button class="btn-tier" onclick="selectTier('SIERRA', this)">SIERRA</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
